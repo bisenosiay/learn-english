@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/learn-english/static/css/main.a0860aec.css",
+    "main.js": "/learn-english/static/js/main.d72dd9ae.js",
+    "index.html": "/learn-english/index.html",
+    "main.a0860aec.css.map": "/learn-english/static/css/main.a0860aec.css.map",
+    "main.d72dd9ae.js.map": "/learn-english/static/js/main.d72dd9ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0860aec.css",
+    "static/js/main.d72dd9ae.js"
+  ]
+}
