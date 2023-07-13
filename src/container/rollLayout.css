@@ -1,0 +1,12 @@
+.roll_layout{
+    width: 400px;
+}
+.roll_layout_btn{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+}
+.roll_layout_btn:hover{
+    cursor: pointer;
+    background-color: rgb(154, 154, 246);
+}

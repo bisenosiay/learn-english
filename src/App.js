@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import BoxVocal from './components/BoxVocal/BoxVocal';
+import RollLayout from './container/RollLayout';
+import { dataVI } from './data/vi';
+import { dataEN } from './data/en';
 
 function App() {
+  const [_language, _setLanguage] = useState('vi')
+  const [_vocal, _setVocal] = useState()
+  const [_dataList, _setDataList] = useState([])
+
+  useEffect(() => {
+    const listRemove = JSON.parse(localStorage.getItem(_language))
+    const dataFilter = _language === 'vi' ? dataVI : dataEN
+    let dataList = []
+    listRemove?.forEach(element => {
+      dataList = dataFilter.filter(v => v.value !== element.value)
+    })
+    _setDataList(dataList.length === 0 ? dataFilter : dataList)
+
+  }, [_language])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RollLayout
+        __setLanguage={_setLanguage}
+        __setVocal={_setVocal}
+        __dataList={_dataList}
+      />
+      {_vocal?.value && <BoxVocal
+        __language={_language}
+        __vocal={_vocal}
+        __setVocal={_setVocal}
+        __setDataList={_setDataList}
+      />}
     </div>
   );
 }
