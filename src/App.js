@@ -9,6 +9,7 @@ function App() {
   const [_language, _setLanguage] = useState('vi')
   const [_vocal, _setVocal] = useState()
   const [_dataList, _setDataList] = useState([])
+  const [_meaning,_setMeaning] = useState(false)
 
   useEffect(() => {
     const listRemove = JSON.parse(localStorage.getItem(_language))
@@ -27,12 +28,15 @@ function App() {
         __setLanguage={_setLanguage}
         __setVocal={_setVocal}
         __dataList={_dataList}
+        __setMeaning={_setMeaning}
       />
       {_vocal?.value && <BoxVocal
         __language={_language}
         __vocal={_vocal}
         __setVocal={_setVocal}
         __setDataList={_setDataList}
+        __setMeaning={_setMeaning}
+        __meaning={_meaning}
       />}
     </div>
   );
