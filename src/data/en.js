@@ -83,4 +83,7 @@ export const dataEN = [
     { value: "settle", type: "verb", vn:"đạt đc,giải quyết"},
     { value: "fulfills", type: "verb", vn:"thi hành, làm cho xong"},
     { value: "ambition", type: "noun", vn:"tham vọng"},
+    { value: "compilation", type: "noun", vn: "biên soạn"},
+    { value: "portion", type: "noun", vn: "chia ra 1 phần"},
+    { value: "comprehensive", type: "adj", vn: "toàn diện"}
 ]
