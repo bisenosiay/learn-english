@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import BoxVocal from './components/BoxVocal/BoxVocal';
 import RollLayout from './container/RollLayout';
-import { dataVI } from './data/vi';
 import { dataEN } from './data/en';
+import usePrevious from "./hook/usePrevious";
 
 function App() {
   const [_language, _setLanguage] = useState('vi')
@@ -12,25 +12,26 @@ function App() {
   const [_meaning,_setMeaning] = useState(false)
 
   useEffect(() => {
-    const listRemove = JSON.parse(localStorage.getItem(_language))
-    const dataFilter = _language === 'vi' ? dataVI : dataEN
+    const listRemove = JSON.parse(localStorage.getItem("old"))
+    const dataFilter = dataEN
     let dataList = []
     listRemove?.forEach(element => {
-      dataList = dataFilter.filter(v => v.value !== element.value)
+      dataList = dataFilter.filter(v => v._id !== element._id)
     })
     _setDataList(dataList.length === 0 ? dataFilter : dataList)
 
-  }, [_language])
+  }, [])
 
   return (
     <div className="App">
       <RollLayout
         __setLanguage={_setLanguage}
+        __language={_language}
         __setVocal={_setVocal}
         __dataList={_dataList}
         __setMeaning={_setMeaning}
       />
-      {_vocal?.value && <BoxVocal
+      {_vocal?.[_language] && <BoxVocal
         __language={_language}
         __vocal={_vocal}
         __setVocal={_setVocal}

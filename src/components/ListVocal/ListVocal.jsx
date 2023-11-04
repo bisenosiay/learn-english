@@ -1,11 +1,11 @@
 import './listVocal.css'
 
-function ListVocal({ data }) {
+function ListVocal({ data, ____language }) {
     const renderList = () => {
         return data.map((vocal) => {
             return (
-                <li key={vocal.value}>
-                    {vocal.value}
+                <li key={vocal._id}>
+                    {vocal[____language]}
                 </li>
             )
         })
