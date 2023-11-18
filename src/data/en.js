@@ -152,7 +152,7 @@ export const dataEN = [
     { _id: 108, en: "ingeste", type: "verb", vi: "ăn vào, ngốn, nuốt" },
     { _id: 109, en: "volumes", type: "noun", vi: "dung lượng, quyển sách" },
     { _id: 110, en: "latency", type: "noun", vi: "độ trễ" },
-    { _id: 111, en: "diverse", type: "adj", vi: "khác nhau" },
+    { _id: 111, en: "diverse", type: "adj", vi: "đa dạng" },
     { _id: 112, en: "tolerance", type: "noun", vi: "sự chịu đựng" },
     { _id: 113, en: "gather", type: "verb", vi: "thu thập" },
     { _id: 114, en: "consolidate", type: "verb", vi: "củng cố" },
@@ -164,4 +164,9 @@ export const dataEN = [
     { _id: 120, en: "anomalies", type: "noun", vi: "sự bất thường" },
     { _id: 121, en: "versatile", type: "adj", vi: "linh hoạt" },
     { _id: 122, en: "excel", type: "verb", vi: "vượt trội" },
+    { _id: 124, en: "ambiguous", type: "adj", vi: "mơ hồ, khả nghi" },
+    { _id: 125, en: "concrete", type: "adj (noun)", vi: "cụ thể" },
+    { _id: 126, en: "satisfy", type: "verb", vi: "hài lòng, thỏa mãn" },
+    { _id: 127, en: "articulate", type: "adj, verb", vi: "nói rõ ràng" },
+    { _id: 128, en: "infrastructure", type: "noun", vi: "cơ sở hạ tầng" },
 ];
