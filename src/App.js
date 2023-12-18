@@ -4,6 +4,7 @@ import BoxVocal from './components/BoxVocal/BoxVocal';
 import RollLayout from './container/RollLayout';
 import { dataEN } from './data/en';
 import usePrevious from "./hook/usePrevious";
+import CalcFood from './container/Calc/Calc';
 
 function App() {
   const [_language, _setLanguage] = useState('vi')
@@ -15,10 +16,9 @@ function App() {
     const listRemove = JSON.parse(localStorage.getItem("old"))
     const dataFilter = dataEN
     let dataList = []
-    listRemove?.forEach(element => {
-      dataList = dataFilter.filter(v => v._id !== element._id)
-    })
-    _setDataList(dataList.length === 0 ? dataFilter : dataList)
+
+    dataList = dataFilter.filter(v=> !listRemove?.some(e=>e._id==v._id))
+    _setDataList(dataList)
 
   }, [])
 
@@ -39,6 +39,7 @@ function App() {
         __setMeaning={_setMeaning}
         __meaning={_meaning}
       />}
+      <CalcFood/>
     </div>
   );
 }

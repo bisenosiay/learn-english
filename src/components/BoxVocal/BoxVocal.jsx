@@ -31,9 +31,7 @@ function BoxVocal({ __vocal, __setVocal, __language, __setDataList, __meaning, _
         __setDataList((old) => old.filter(e => e._id !== __vocal._id))
         __setVocal(null)
     }
-    const handleKeyPress = (e) => {
-        console.log(e.key)
-    }
+
     return (
         <div className="box_vocal">
             <h4>{__vocal[__language]}</h4>
