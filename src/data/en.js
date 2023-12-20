@@ -169,4 +169,9 @@ export const dataEN = [
     { _id: 126, en: "satisfy", type: "verb", vi: "hài lòng, thỏa mãn" },
     { _id: 127, en: "articulate", type: "adj, verb", vi: "nói rõ ràng" },
     { _id: 128, en: "infrastructure", type: "noun", vi: "cơ sở hạ tầng" },
+    { _id: 129, en: "eliminate", type: "verb", vi: "loại bỏ" },
+    { _id: 130, en: "excess", type: "noun", vi: "dư thừa" },
+    { _id: 131, en: "principle", type: "noun", vi: "nguyên tắc" },
+    { _id: 132, en: "simultaneous", type: "adj", vi: "đông thời" },
+    { _id: 133, en: "carry out", type: "phrasal verb", vi: "thực hiện" },
 ];
