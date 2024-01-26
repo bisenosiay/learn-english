@@ -1,7 +1,11 @@
-.cal_food{
-    width: 400px;
-    height: 500px;
-    border: 3px solid rgb(0, 196, 88);
+:root {
+    --primary: rgb(49, 212, 158);
+}
+
+.cal_food {
+    width: 450px;
+    min-height: 300px;
+    border: 3px solid var(--primary);
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
@@ -12,30 +16,142 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.cal_food_person{
+
+.cal_food button {
+    height: 40px;
+    width: 49%;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid rgb(0, 179, 80);
+    background-color: rgb(0, 179, 80);
+    color: white;
+}
+
+.cal_food button:nth-child(2) {
+    border: 2px solid rgb(60, 176, 230);
+    background-color: rgb(60, 176, 230);
+    color: white;
+}
+
+.cal_food button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 179, 80);
+}
+
+.cal_food button:nth-child(2):hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(60, 176, 230);
+}
+
+.cal_food_person {
     width: 150px;
     height: 25px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
-.cal_food_input{
+
+.cal_food_input {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
 }
 
-.cal_food_input div{
+.cal_food_input div {
     display: flex;
     width: 100%;
     flex-direction: row;
     padding: 0 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.cal_food_input input{
+.cal_food_input input {
     width: 55%;
     margin-right: 10px;
 }
 
-.cal_food_input span{
+.cal_food_input span {
     width: 45%;
+}
+
+.cal_food_order {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.cal_food_order span {}
+
+.cal_food_table {
+    width: 100%;
+    border-top: 20px solid var(--primary);
+    border-bottom: 20px solid var(--primary);
+    padding: 5px 0;
+}
+
+.cal_food_table_row {
+    display: flex;
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.cal_food_table_row:nth-child(even) {
+    background: #dddddd;
+}
+
+._tr {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.cal_food_table_row_1 {
+    width: 40%;
+}
+
+.cal_food_table_row_2 {
+    width: 30%;
+}
+
+.cal_food_table_row_3 {
+    width: 30%;
+}
+
+.div_middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+}
+
+.div_middle input {
+    width: 46%;
+    height: 25px;
+}
+
+._total {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
+
+._input_calc{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    color: rgb(255, 255, 255);
+    left: calc(46% - 10px - 10px);
+    top: 3px;
+    border-radius:  3px;
+    font-weight: 600;
+    background-color: var(--primary);
+}
+
+._input_calc:hover{
+    cursor: pointer;
+    background: gray;
 }
