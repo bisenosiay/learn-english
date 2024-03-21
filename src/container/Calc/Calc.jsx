@@ -57,6 +57,7 @@ function CalcFood() {
                     <input className='cal_food_table_row_1' type='number' value={_detail[index]?.value || 0} onChange={(e) => changeInput(e.target?.value, index)} />
                     <span className='cal_food_table_row_2'>{_detail[index]?.dis || 0}</span>
                     <span className='cal_food_table_row_3'>{((_detail[index]?.value - _detail[index]?.dis) || 0).toFixed(2)}</span>
+                    <input className='cal_food_table_row_4' type='text' />
                 </div>
             )
         })
@@ -95,6 +96,7 @@ function CalcFood() {
                     <span className='cal_food_table_row_1'>Tiền từng món</span>
                     <span className='cal_food_table_row_2'>Giảm giá</span>
                     <span className='cal_food_table_row_3'>Tiền phải trả</span>
+                    <span className='cal_food_table_row_4'>Tên</span>
                 </div>
                 {returnArray(_person)}
             </div>

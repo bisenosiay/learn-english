@@ -108,15 +108,19 @@
 }
 
 .cal_food_table_row_1 {
-    width: 40%;
+    width: 35%;
 }
 
 .cal_food_table_row_2 {
-    width: 30%;
+    width: 25%;
 }
 
 .cal_food_table_row_3 {
-    width: 30%;
+    width: 25%;
+}
+
+.cal_food_table_row_4 {
+    width: 15%;
 }
 
 .div_middle {
