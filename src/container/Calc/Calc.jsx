@@ -28,6 +28,7 @@ function CalcFood() {
             total += _detail[i].value * 1
         }
         let newDetail = []
+        let realDiscount = total - _discount
         for (let j = 0; j < _detail.length; j++) {
             const ele = _detail[j];
             if (j >= _person)
@@ -35,9 +36,9 @@ function CalcFood() {
             let percent = ele.value / total * 100
             newDetail.push({
                 value: ele.value,
-                dis: (percent / 100 * _discount).toFixed(2)
+                dis: (percent / 100 * realDiscount).toFixed(2)
             })
-            totalAmount += (ele.value - (percent / 100 * _discount))
+            totalAmount += (ele.value - (percent / 100 * realDiscount))
         }
         _setTotal(totalAmount)
         _setDetail(newDetail)
@@ -75,7 +76,7 @@ function CalcFood() {
 
     return (
         <div className="cal_food">
-            <h2>Tính tiền thức ăn</h2>
+            <h2>Công cụ tính tiền</h2>
             <div className='cal_food_order'>
                 <span>
                     Số lượng người đặt
@@ -111,7 +112,7 @@ function CalcFood() {
                 <input
                     className='cal_food_person'
                     type='text'
-                    placeholder='Giảm giá + phí ship'
+                    placeholder='Số tiền thực trả'
                     value={_discount}
                     onChange={(e) => _setDiscount(e.target.value)}
                 />
