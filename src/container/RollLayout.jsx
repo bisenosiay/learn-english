@@ -3,7 +3,7 @@ import SelectLang from "../components/SelectLang/SelectLang";
 import ListVocal from "../components/ListVocal/ListVocal";
 import { useEffect } from 'react';
 
-function RollLayout({ __setLanguage, __setVocal, __dataList,__setMeaning,__language }) {
+function RollLayout({ __setLanguage, __setVocal, __dataList,__setMeaning,__language,__url,__setUrl,_SetDataSave }) {
     useEffect(() => {
         const keyDownHandler = event => { 
             if (event.key === ' ') {
@@ -26,8 +26,17 @@ function RollLayout({ __setLanguage, __setVocal, __dataList,__setMeaning,__langu
         __setVocal(__dataList[rand.toFixed()])
         __setMeaning(false)
     }
+
     return (
         <div className="roll_layout">
+            <div className='input-url'>
+                <input type="text" value={__url} onChange={(e)=>__setUrl(e.target.value)}/>
+                <button onClick={() => _SetDataSave()}>Set</button>
+                <button onClick={() => {
+                    localStorage.setItem("url", __url)
+                    _SetDataSave()
+                }}>Save</button>
+            </div>
             <SelectLang setLanguage={__setLanguage} />
             <ListVocal data={__dataList} ____language={__language}/>
             <button className="roll_layout_btn" onClick={() => handleRandom()}>
