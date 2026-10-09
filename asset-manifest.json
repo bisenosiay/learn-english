@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/learn-english/static/css/main.af15bd5f.css",
-    "main.js": "/learn-english/static/js/main.3aa01d3b.js",
+    "main.css": "/learn-english/static/css/main.d61e6bbd.css",
+    "main.js": "/learn-english/static/js/main.77f68c0f.js",
+    "static/media/thuy-nga2.jpeg": "/learn-english/static/media/thuy-nga2.3e79f3ded73cc69562c6.jpeg",
+    "static/media/thuy-nga1.jpeg": "/learn-english/static/media/thuy-nga1.7ab70874ccfc7b0ab7a9.jpeg",
     "index.html": "/learn-english/index.html",
-    "main.af15bd5f.css.map": "/learn-english/static/css/main.af15bd5f.css.map",
-    "main.3aa01d3b.js.map": "/learn-english/static/js/main.3aa01d3b.js.map"
+    "main.d61e6bbd.css.map": "/learn-english/static/css/main.d61e6bbd.css.map",
+    "main.77f68c0f.js.map": "/learn-english/static/js/main.77f68c0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.af15bd5f.css",
-    "static/js/main.3aa01d3b.js"
+    "static/css/main.d61e6bbd.css",
+    "static/js/main.77f68c0f.js"
   ]
 }
