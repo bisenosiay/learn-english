@@ -1,18 +1,28 @@
 import './listVocal.css'
 
-function ListVocal({ data, ____language }) {
-    const renderList = () => {
-        return data.map((vocal) => {
-            return (
-                <li key={vocal._id}>
-                    {vocal[____language]}
-                </li>
-            )
-        })
+function ListVocal({ data, language, onPick, activeId }) {
+    if (!data.length) {
+        return <p className="list-empty">No words in this view.</p>
     }
-    return ( 
+
+    return (
         <ul className="list_vocal">
-           {renderList()}
+            {data.map((vocal, index) => {
+                const label = vocal[language] || "—"
+                const active = activeId !== undefined && activeId !== null && String(vocal._id) === String(activeId)
+                return (
+                    <li key={vocal._id || `${label}-${index}`}>
+                        <button
+                            type="button"
+                            className={active ? "is-active" : ""}
+                            onClick={() => onPick(vocal)}
+                        >
+                            <span className="word">{label}</span>
+                            {vocal.type ? <span className="type">{vocal.type}</span> : null}
+                        </button>
+                    </li>
+                )
+            })}
         </ul>
     );
 }

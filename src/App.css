@@ -1,7 +1,163 @@
 .App {
-  text-align: center;
-  padding: 10px;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 24px 40px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 20px;
 }
 
+.app-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.app-count {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.8);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.source-card {
+  align-self: start;
+}
+
+.stage {
+  position: sticky;
+  top: 20px;
+  display: flex;
+}
+
+.stage-empty,
+.box_vocal {
+  width: 100%;
+  min-height: 460px;
+  padding: 36px 32px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.stage-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stage-empty h2 {
+  margin: 0 0 10px;
+  max-width: 14ch;
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.stage-empty p {
+  margin: 0;
+  max-width: 42ch;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.shortcut-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shortcut-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #f7f3ea;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shortcut-list kbd {
+  height: 22px;
+  min-width: 22px;
+  padding: 0 6px 2px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.shortcut-list kbd.key-grave {
+  height: 26px;
+  min-width: 26px;
+  padding: 7px 7px 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 740px) {
+  .App {
+    padding: 16px 14px 28px;
+  }
+
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app-header h1 {
+    font-size: 34px;
+  }
+
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+
+  .stage {
+    position: static;
+  }
+
+  .stage-empty,
+  .box_vocal {
+    min-height: 0;
+  }
+}
